@@ -37,7 +37,7 @@ void uncaughtExceptionHandler(NSException *exception)
         
         if(outFile == nil)
         {
-            DDLogWarn(@"Open of file for writing failed");
+            NSLog(@"！！-> Open of file for writing failed");
         }
         //找到并定位到outFile的末尾位置(在此后追加文件)
         [outFile seekToEndOfFile];
