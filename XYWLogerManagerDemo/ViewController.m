@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    DDLogVerbose(@"正在使用XYWLogerManager哦！");
+    DDLogInfo(@"启动成功");
+    DDLogError(@"输出个错误信息");
     // Do any additional setup after loading the view, typically from a nib.
 }
 

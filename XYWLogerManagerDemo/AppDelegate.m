@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "XYWLogerManager.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [XYWLogerManager setUpLoger];
     // Override point for customization after application launch.
     return YES;
 }
