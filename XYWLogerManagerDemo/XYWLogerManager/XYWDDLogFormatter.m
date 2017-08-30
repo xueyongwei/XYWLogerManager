@@ -7,6 +7,10 @@
 //
 
 #import "XYWDDLogFormatter.h"
+#import "DDLog.h"
+@interface XYWDDLogFormatter () <DDLogFormatter>
+
+@end
 
 @implementation XYWDDLogFormatter
 -(NSString *)formatLogMessage:(DDLogMessage* )logMessage {

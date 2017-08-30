@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CocoaLumberjack.h"
 @interface XYWCatchCrash : NSObject
 void uncaughtExceptionHandler(NSException *exception);
 @end

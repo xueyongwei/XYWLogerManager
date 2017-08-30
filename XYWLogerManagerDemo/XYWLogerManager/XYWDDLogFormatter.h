@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CocoaLumberjack.h"
-@interface XYWDDLogFormatter : NSObject<DDLogFormatter>
+
+@interface XYWDDLogFormatter : NSObject
 
 @end
