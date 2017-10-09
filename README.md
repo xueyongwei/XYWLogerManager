@@ -17,10 +17,9 @@ XYW日志系统
 或者
     <pre><code>DDLogError(@"%@",_datasource)</pre></code>
 替换
-    <pre><code>NSLog("%@",_datasource)
+    <pre><code>NSLog("%@",_datasource)</pre></code>
 输出日志即可;
- 
-
-崩溃日志存储到/Documents/error.log文件中
+### 日志文件
+崩溃日志存储到/Documents/error.log文件中了。
 
 
