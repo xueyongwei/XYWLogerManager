@@ -16,9 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)verbose:(id)sender {
+    DDLogVerbose(@"DDLogVerbose");
+}
+- (IBAction)warning:(id)sender {
+    DDLogWarn(@"DDLogWarn");
+}
+- (IBAction)err:(id)sender {
+    DDLogError(@"DDLogError");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface XYWDDLogFormatter : NSObject
+#import "DDLog.h"
+@interface XYWDDLogFormatter : NSObject <DDLogFormatter>
 
 @end
