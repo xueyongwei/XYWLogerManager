@@ -2,14 +2,12 @@
 XYW日志系统
 ### 使用方法：
 1.先在pch中添加以下内容：
-<pre><code>
-    #import <CocoaLumberjack.h>
+<pre><code>#import <CocoaLumberjack.h>
     #ifdef DEBUG
     static const int ddLogLevel = DDLogLevelVerbose;
     #else
     static const int ddLogLevel = DDLogLevelError;
-    #endif
-    </pre></code>
+    #endif</pre></code>
 2.然后在app delegate中导入"XYWLogerManager.h",并在didFinishLaunchingWithOptions中添加以下内容：
  <pre><code>[XYWLogerManager setUpLoger];</pre></code>
 3.在代码中使用
