@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [XYWLogerManager setUpLoger];
+    [[XYWLogerManager shareManager] setUpLoger];
     // Override point for customization after application launch.
     return YES;
 }

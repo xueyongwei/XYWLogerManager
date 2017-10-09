@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "XYWLogerManager.h"
 @interface ViewController ()
 
 @end
@@ -28,6 +28,14 @@
 }
 - (IBAction)err:(id)sender {
     DDLogError(@"DDLogError");
+}
+
+- (IBAction)sendlog:(id)sender {
+    [[XYWLogerManager shareManager]sendLogFileToEmail:@"xueyongwei@foxmail.com"];
+}
+
+- (IBAction)sendCrash:(id)sender {
+    [[XYWLogerManager shareManager]sendCrashFileToEmail:@"xueyongwei@foxmail.com"];
 }
 
 - (void)didReceiveMemoryWarning {

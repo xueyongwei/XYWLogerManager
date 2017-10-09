@@ -27,6 +27,8 @@
 		856465E11F1759090005C6BA /* XYWCatchCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 856465DC1F1759090005C6BA /* XYWCatchCrash.m */; };
 		856465E21F1759090005C6BA /* XYWDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 856465DE1F1759090005C6BA /* XYWDDLogFormatter.m */; };
 		856465E31F1759090005C6BA /* XYWLogerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 856465E01F1759090005C6BA /* XYWLogerManager.m */; };
+		85D121C41F8B746300079BD1 /* XYWAppVersionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D121C31F8B746300079BD1 /* XYWAppVersionHelper.m */; };
+		85D121C71F8B84AF00079BD1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D121C61F8B84AF00079BD1 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,9 @@
 		856465DF1F1759090005C6BA /* XYWLogerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWLogerManager.h; sourceTree = "<group>"; };
 		856465E01F1759090005C6BA /* XYWLogerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWLogerManager.m; sourceTree = "<group>"; };
 		856465E41F1759730005C6BA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		85D121C21F8B746300079BD1 /* XYWAppVersionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWAppVersionHelper.h; sourceTree = "<group>"; };
+		85D121C31F8B746300079BD1 /* XYWAppVersionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWAppVersionHelper.m; sourceTree = "<group>"; };
+		85D121C61F8B84AF00079BD1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D121C71F8B84AF00079BD1 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,7 @@
 			children = (
 				856465721F1758580005C6BA /* XYWLogerManagerDemo */,
 				856465711F1758580005C6BA /* Products */,
+				85D121C51F8B84AF00079BD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +113,7 @@
 		856465721F1758580005C6BA /* XYWLogerManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				85D121C11F8B746300079BD1 /* XYWAppVersionHelper */,
 				856465DA1F1759090005C6BA /* XYWLogerManager */,
 				856465AF1F1758CB0005C6BA /* Classes */,
 				856465761F1758580005C6BA /* AppDelegate.h */,
@@ -193,6 +201,23 @@
 			path = XYWLogerManager;
 			sourceTree = "<group>";
 		};
+		85D121C11F8B746300079BD1 /* XYWAppVersionHelper */ = {
+			isa = PBXGroup;
+			children = (
+				85D121C21F8B746300079BD1 /* XYWAppVersionHelper.h */,
+				85D121C31F8B746300079BD1 /* XYWAppVersionHelper.m */,
+			);
+			path = XYWAppVersionHelper;
+			sourceTree = "<group>";
+		};
+		85D121C51F8B84AF00079BD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85D121C61F8B84AF00079BD1 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +301,7 @@
 				8564657B1F1758580005C6BA /* ViewController.m in Sources */,
 				856465D11F1758CC0005C6BA /* DDASLLogCapture.m in Sources */,
 				856465D71F1758CC0005C6BA /* DDContextFilterLogFormatter.m in Sources */,
+				85D121C41F8B746300079BD1 /* XYWAppVersionHelper.m in Sources */,
 				856465D01F1758CB0005C6BA /* DDAbstractDatabaseLogger.m in Sources */,
 				856465D81F1758CC0005C6BA /* DDDispatchQueueLogFormatter.m in Sources */,
 				856465781F1758580005C6BA /* AppDelegate.m in Sources */,
@@ -405,7 +431,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYWLogerManagerDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = XYWLogerManagerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = downloader.dramUnited.ltd.XYWLogerManagerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = xyw.logerManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "2e891a83-b0ae-4fea-8ec4-28306479e3c8";
 				PROVISIONING_PROFILE_SPECIFIER = AllCanUse;
@@ -420,7 +446,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYWLogerManagerDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = XYWLogerManagerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = downloader.dramUnited.ltd.XYWLogerManagerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = xyw.logerManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

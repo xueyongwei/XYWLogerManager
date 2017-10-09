@@ -21,6 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAK-BL-ahn">
+                                <rect key="frame" x="160.5" y="238.5" width="55" height="30"/>
+                                <state key="normal" title="verbose"/>
+                                <connections>
+                                    <action selector="verbose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zpx-AF-2Jk"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLW-X9-0Xd">
                                 <rect key="frame" x="160.5" y="318.5" width="55" height="30"/>
                                 <state key="normal" title="warning"/>
@@ -35,11 +42,18 @@
                                     <action selector="err:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1s-r2-OmV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAK-BL-ahn">
-                                <rect key="frame" x="160.5" y="238.5" width="55" height="30"/>
-                                <state key="normal" title="verbose"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQI-lb-UKR">
+                                <rect key="frame" x="10" y="617" width="172.5" height="30"/>
+                                <state key="normal" title="发送日志信息"/>
                                 <connections>
-                                    <action selector="verbose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zpx-AF-2Jk"/>
+                                    <action selector="sendlog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFF-ZU-XRE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZy-gf-cSz">
+                                <rect key="frame" x="192.5" y="617" width="172.5" height="30"/>
+                                <state key="normal" title="发送崩溃信息"/>
+                                <connections>
+                                    <action selector="sendCrash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ey5-2f-FR6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,10 +61,16 @@
                         <constraints>
                             <constraint firstItem="FLW-X9-0Xd" firstAttribute="top" secondItem="cAK-BL-ahn" secondAttribute="bottom" constant="50" id="4FF-hD-guq"/>
                             <constraint firstItem="bYF-Mu-BPJ" firstAttribute="centerX" secondItem="FLW-X9-0Xd" secondAttribute="centerX" id="8n4-gv-vnW"/>
+                            <constraint firstAttribute="trailing" secondItem="DZy-gf-cSz" secondAttribute="trailing" constant="10" id="Eob-qi-65G"/>
                             <constraint firstItem="FLW-X9-0Xd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TEM-LU-UAm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DZy-gf-cSz" secondAttribute="bottom" constant="20" id="Vro-0T-u6k"/>
                             <constraint firstItem="FLW-X9-0Xd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XKp-ls-WPR"/>
+                            <constraint firstItem="iQI-lb-UKR" firstAttribute="width" secondItem="DZy-gf-cSz" secondAttribute="width" id="d91-Vn-Va3"/>
                             <constraint firstItem="bYF-Mu-BPJ" firstAttribute="top" secondItem="FLW-X9-0Xd" secondAttribute="bottom" constant="50" id="iCd-PJ-iaJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iQI-lb-UKR" secondAttribute="bottom" constant="20" id="q4X-QA-Eg7"/>
+                            <constraint firstItem="iQI-lb-UKR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="skm-qC-J0z"/>
                             <constraint firstItem="cAK-BL-ahn" firstAttribute="centerX" secondItem="FLW-X9-0Xd" secondAttribute="centerX" id="ubC-ac-H68"/>
+                            <constraint firstItem="DZy-gf-cSz" firstAttribute="leading" secondItem="iQI-lb-UKR" secondAttribute="trailing" constant="10" id="xXS-vi-ZtP"/>
                         </constraints>
                     </view>
                 </viewController>

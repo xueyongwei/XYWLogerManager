@@ -7,22 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
+#import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 /* 使用方法：
- //⚠️先在pch中添加以下内容：
+ ⚠️依赖库：CocoaLumberjack
+ //先在pch中添加以下内容：
  #import <CocoaLumberjack.h>
  #ifdef DEBUG
  static const int ddLogLevel = DDLogLevelVerbose;
  #else
  static const int ddLogLevel = DDLogLevelError;
  #endif
- //⚠️然后在app delegate中导入"XYWLogerManager.h",并在didFinishLaunchingWithOptions中添加以下内容：
+ //然后在app delegate中导入"XYWLogerManager.h",并在didFinishLaunchingWithOptions中添加以下内容：
  [XYWLogerManager setUpLoger];
- //⚠️在代码中使用DDLogVerbose(@"%@",_datasource)或者DDLogError(@"%@",_datasource)替换NSLog("%@",_datasource)输出日志即可;
+ //在代码中使用DDLogVerbose(@"%@",_datasource)或者DDLogError(@"%@",_datasource)替换NSLog("%@",_datasource)输出日志即可;
  
- //⚠️崩溃日志存储到/Documents/error.log文件中
+ //崩溃日志存储到/Documents/error.log文件中
  */
-@interface XYWLogerManager : NSObject
-+(void)setUpLoger;
+@interface XYWLogerManager : NSObject<MFMailComposeViewControllerDelegate,UINavigationControllerDelegate>
++(instancetype)shareManager;
+-(void)setUpLoger;
+-(void)sendLogFileToEmail:(NSString *)email;
+-(void)sendCrashFileToEmail:(NSString *)email;
 @end
