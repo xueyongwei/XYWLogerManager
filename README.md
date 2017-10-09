@@ -26,8 +26,11 @@ XYW日志系统，依赖库：CocoaLumberjack
 <pre><code>
 [[XYWLogerManager shareManager]sendLogFileToEmail:@"xueyongwei@foxmail.com"];
 </pre></code>
-来获取用户的详细运行日志。如果要追踪崩溃日志，可以通过调用以下方法：
+来获取用户的详细运行日志。<br>
+如果要追踪崩溃日志，可以通过调用以下方法：
 <pre><code>
 [[XYWLogerManager shareManager]sendCrashFileToEmail:@"xueyongwei@foxmail.com"];
 </pre></code>
-来获取。
+来获取崩溃日志。
+### 参数设置
+在XYWLogerManager.m文件中的setUpLoger方法中，可修改rollingFrequency或maximumNumberOfLogFiles等属性。
