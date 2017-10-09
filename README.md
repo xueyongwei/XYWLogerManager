@@ -1,5 +1,5 @@
 # XYWLogerManager
-XYW日志系统
+XYW日志系统，依赖库：CocoaLumberjack
 ### 使用方法：
 1.先在pch中添加以下内容：
 <pre><code>#import <CocoaLumberjack.h>
@@ -19,5 +19,4 @@ XYW日志系统
 输出日志即可;
 ### 日志文件
 崩溃日志存储到/Documents/error.log文件中了。
-
 
