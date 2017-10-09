@@ -21,7 +21,7 @@ XYW日志系统，依赖库：CocoaLumberjack
 ### 日志文件
 崩溃日志存储到/Documents/error.log文件中了。
 ### 发送日志到邮箱
-日志已被记录到沙盒，可通过【隐式触发】来让用户发送日志文件到开发者邮箱，以追踪信息。
+日志已被记录到沙盒，可通过【隐式触发】来让用户发送日志文件到开发者邮箱，以追踪信息。</br>
 比如在“设置”中，通过点击10次app名字触发以下方法：
 <pre><code>
 [[XYWLogerManager shareManager]sendLogFileToEmail:@"xueyongwei@foxmail.com"];
