@@ -2,20 +2,22 @@
 XYW日志系统
 ### 使用方法：
 1.先在pch中添加以下内容：
-    #import <CocoaLumberjack.h>
+<pre><code>
+    #import <CocoaLumberjack.h>
     #ifdef DEBUG
     static const int ddLogLevel = DDLogLevelVerbose;
     #else
     static const int ddLogLevel = DDLogLevelError;
     #endif
+    </pre></code>
 2.然后在app delegate中导入"XYWLogerManager.h",并在didFinishLaunchingWithOptions中添加以下内容：
-    [XYWLogerManager setUpLoger];
+ <pre><code>[XYWLogerManager setUpLoger];</pre></code>
 3.在代码中使用
-    DDLogVerbose(@"%@",_datasource)
+    <pre><code>DDLogVerbose(@"%@",_datasource)</pre></code>
 或者
-    DDLogError(@"%@",_datasource)
+    <pre><code>DDLogError(@"%@",_datasource)</pre></code>
 替换
-    NSLog("%@",_datasource)
+    <pre><code>NSLog("%@",_datasource)
 输出日志即可;
  
 
