@@ -3,7 +3,8 @@ XYW日志系统，依赖库：CocoaLumberjack
 本地日志系统，格式化控制台信息，并输出日志信息到本地log文件，可捕获崩溃信息并保存日志文件到沙盒，可直接发送运行设备的本地详细日志或者崩溃日志到指定邮箱。
 ### 使用方法：
 1.先在pch中添加以下内容：
-<pre><code>#import <CocoaLumberjack.h>
+<pre><code>
+    #import <CocoaLumberjack.h>
     static const int ddLogLevel = DDLogLevelVerbose;
     #else
     static const int ddLogLevel = DDLogLevelError;
